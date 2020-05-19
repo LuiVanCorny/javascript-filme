@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Franz Kohnle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Filme</h1>
+    <h2>Die Favoriten von Franz Kohnle</h2>
+  </header>
+
+  <main>
+    <!-- Neuen Film eintragen -->
+    <section>
+      <h2>Neuen Film eintragen</h2>
+
+      <!-- Neuer Film: Titel -->
+      <fieldset>
+        <legend>Titel</legend>
+        <input id="inputTitel" type="text" placeholder="Titel des Films" />
+      </fieldset>
+
+      <!-- Neuer Film: Bewertung -->
+      <fieldset>
+        <legend>Bewertung</legend>
+        <input id="sliderBewertung" type="range" min="1" max="5" value="5" />
+      </fieldset>
+
+      <!-- Neuer Film: Kategorie -->
+      <fieldset>
+        <legend>Kategorie</legend>
+
+        <input id="radioBergfilm" type="radio" name="kategorie" checked />
+        <label for="radioBergfilm">Bergfilm</label>
+
+        <input id="radioRoadmovie" type="radio" name="kategorie" />
+        <label for="radioRoadmovie">Roadmovie</label>
+      </fieldset>
+
+      <button id="buttonNeu">Film speichern</button>
+    </section>
+
+    <!-- Statistik -->
+    <section>
+      <h2>Statistik</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Bergfilm</th>
+            <th>Roadmovie</th>
+            <th>Gesamt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="tdBergfilm"></td>
+            <td id="tdRoadmovie"></td>
+            <td id="tdGesamt"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Die neuesten Filme -->
+    <section>
+      <h2>Die neuesten Filme</h2>
+      <ul id="ulNeueste">
+        <li>xyz</li>
+        <li>xyz</li>
+        <li>xyz</li>
+      </ul>
+    </section>
+
+    <!-- Alle Filme -->
+    <section>
+      <h2>Alle Filme</h2>
+      <ul id="ulAlle">
+        <li>xyz</li>
+        <li>xyz</li>
+        <li>xyz</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
