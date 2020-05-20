@@ -39,6 +39,15 @@ export class Presenter {
         this._allesAnzeigen();
     }
 
+    sliderBewertungChange(){
+        let bewertung = this.view.getBewertung();
+        let sterneString = "";
+        for(let i = 0; i < bewertung; i++){
+            sterneString += "*"
+        }
+        this.view.displaySterneBewertung(sterneString);
+    }
+
     // PRIVATE
     _allesAnzeigen() {
         // Statistik

@@ -6,6 +6,7 @@ export class View {
         this.inputRegie = document.getElementById('inputRegie');
 
         this.sliderBewertung = document.getElementById('sliderBewertung');
+        this.sterneBewertung = document.getElementById('sterneBewertung');
 
         this.radioBergfilm = document.getElementById('radioBergfilm');
         this.radioRoadmovie = document.getElementById('radioRoadmovie');
@@ -25,6 +26,10 @@ export class View {
         this.buttonNeu.addEventListener('click', function () {
             presenter.buttonNeuClick();
         });
+
+        this.sliderBewertung.addEventListener('change', () => {    
+            presenter.sliderBewertungChange();
+        })
     }
 
     // GETTER
@@ -67,6 +72,9 @@ export class View {
     }
     displayAll(stringArray) {
         this._displayList(this.ulAlle, stringArray);
+    }
+    displaySterneBewertung(string){
+        this.sterneBewertung.innerHTML = string;
     }
 
     // PRIVATE
