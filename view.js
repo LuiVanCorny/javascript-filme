@@ -2,6 +2,7 @@ export class View {
     constructor(presenter) {
         // CONTROLS
         this.inputTitel = document.getElementById('inputTitel');
+        this.inputRegie = document.getElementById('inputRegie');
 
         this.sliderBewertung = document.getElementById('sliderBewertung');
 
@@ -27,6 +28,11 @@ export class View {
     getTitel() {
         return this.inputTitel.value;
     }
+
+    getRegie(){
+        return this.inputRegie.value;
+    }
+
     getBewertung() {
         return this.sliderBewertung.value;
     }

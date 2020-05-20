@@ -12,6 +12,7 @@ export class Presenter {
     buttonNeuClick() {
         // Daten von View holen
         const titel = this.view.getTitel();
+        const regie = this.view.getRegie();
         const bewertung = parseInt(this.view.getBewertung());
 
         let kategorie;
@@ -24,6 +25,7 @@ export class Presenter {
         // Objekt zusammenbauen
         const film = {
             titel: titel,
+            regie: regie,
             bewertung: bewertung,
             kategorie: kategorie
         };
@@ -57,8 +59,7 @@ export class Presenter {
         let stringArray = [];
         for (let i = 0; i < filmList.length; i++) {
             const film = filmList[i];
-            const text =
-                film.titel + ': ' + film.bewertung + ' Sterne, ' + film.kategorie;
+            const text =`${film.titel}: ${film.bewertung} Sterne, ${film.kategorie}, ${film.regie}`;
             stringArray.push(text);
         }
         return stringArray;
