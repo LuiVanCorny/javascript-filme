@@ -1,12 +1,17 @@
+import { DAO } from "./dao.js";
+
 export class Model {
 //Ludwig Korn
     constructor() {
-        this.liste = [];
+        this.dao = new DAO();
+        this.liste = this.dao.read();
+        
     }
 
     // CREATE
     addFilm(film) {
         this.liste.push(film);
+        this.dao.write(this.liste);
     }
 
     // READ
