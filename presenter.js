@@ -56,6 +56,7 @@ export class Presenter {
         this.view.displayAnzahlWestern(this.model.getAnzahlWestern());
         this.view.displayAnzahlGesamt(this.model.getAnzahlGesamt());
 
+        this.sliderBewertungChange();
         // Die neuesten Filme
         const filmListNeueste = this.model.getNewest();
         let stringListNeueste = this._filmArrayToStringArray(filmListNeueste);
