@@ -1,6 +1,6 @@
 import { Model } from "./model.js";
 import { View } from "./view.js";
-
+//Ludwig Korn
 export class Presenter {
     constructor() {
         this.model = new Model();

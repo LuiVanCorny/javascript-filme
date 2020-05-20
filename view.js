@@ -1,4 +1,5 @@
 export class View {
+    //Ludwig Korn
     constructor(presenter) {
         // CONTROLS
         this.inputTitel = document.getElementById('inputTitel');
