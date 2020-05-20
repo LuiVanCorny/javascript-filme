@@ -9,11 +9,13 @@ export class View {
 
         this.radioBergfilm = document.getElementById('radioBergfilm');
         this.radioRoadmovie = document.getElementById('radioRoadmovie');
+        this.radioWestern = document.getElementById('radioWestern');
 
         this.buttonNeu = document.getElementById('buttonNeu');
 
         this.tdBergfilm = document.getElementById('tdBergfilm');
         this.tdRoadmovie = document.getElementById('tdRoadmovie');
+        this.tdWestern = document.getElementById('tdWestern');
         this.tdGesamt = document.getElementById('tdGesamt');
 
         this.ulNeueste = document.getElementById('ulNeueste');
@@ -43,6 +45,9 @@ export class View {
     isSelectedRoadmovie() {
         return this.radioRoadmovie.checked;
     }
+    isSelctedWestern(){
+        return this.radioWestern.checked;
+    }
 
     // SETTER
     displayAnzahlBergfilm(zahl) {
@@ -50,6 +55,9 @@ export class View {
     }
     displayAnzahlRoadmovie(zahl) {
         this.tdRoadmovie.innerHTML = zahl;
+    }
+    displayAnzahlWestern(zahl){
+        this.tdWestern.innerHTML = zahl;
     }
     displayAnzahlGesamt(zahl) {
         this.tdGesamt.innerHTML = zahl;

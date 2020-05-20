@@ -18,8 +18,10 @@ export class Presenter {
         let kategorie;
         if (this.view.isSelectedBergfilm()) {
             kategorie = 'Bergfilm';
-        } else {
+        } else if(this.view.isSelectedRoadmovie()) {
             kategorie = 'Roadmovie';
+        } else{
+            kategorie = 'Western';
         }
 
         // Objekt zusammenbauen
@@ -42,6 +44,7 @@ export class Presenter {
         // Statistik
         this.view.displayAnzahlBergfilm(this.model.getAnzahlBergfilm());
         this.view.displayAnzahlRoadmovie(this.model.getAnzahlRoadmovie());
+        this.view.displayAnzahlWestern(this.model.getAnzahlWestern());
         this.view.displayAnzahlGesamt(this.model.getAnzahlGesamt());
 
         // Die neuesten Filme

@@ -1,5 +1,5 @@
 export class Model {
-
+//Ludwig Korn
     constructor() {
         this.liste = [];
     }
@@ -35,6 +35,10 @@ export class Model {
 
     getAnzahlRoadmovie() {
         return this._getAnzahlKategorie('Roadmovie');
+    }
+
+    getAnzahlWestern(){
+        return this._getAnzahlKategorie("Western");
     }
 
     getAnzahlGesamt() {
